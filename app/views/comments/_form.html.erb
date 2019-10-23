@@ -1,0 +1,11 @@
+<%= simple_form_for([@post, @post.comments.build]) do |comment| %>
+  <div class="field">
+    <div class="control">
+      <%= comment.input :name, input_html: {class: 'input'}, wrapper:false, lablel_html: {class: 'label'} %>
+    </div>
+    <div class="control">
+      <%= comment.input :comment, input_html: {class: 'textarea'}, wrapper:false, lablel_html: {class: 'label'} %>
+    </div>
+  </div>
+  <%=comment.button :submit, class:"button is-primary" %>
+<% end %>
